@@ -1,38 +1,320 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.nav{
+    border: 1px solid black;
+    margin: 20px 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #6741d9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #img{
+    font-size: 40px;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  #logotext{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+  }
+  input{
+    height: 45px;
+    width: 450px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+    background-color: #7950f2;
+    border: 0px ;
+    color: white;
+    outline: none;
+  
+  }
+  input::placeholder {
+    color: #b5b3b3; 
+  }
+  
+  #result{
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+  }
+  .MoviesYouWatch{
+    margin: 20px 50px;
+    padding: 20px 30px;
+    color: rgb(246, 242, 242);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container{
+    min-height: 100vh;
+     border: 1px solid black;
+     background-color: #212529;
+   }
+   .moviesone{
+    height: 600px;
+    overflow: auto;
+    width: 400px;
+    position: relative;
+    background-color: #2b3035;
+    color: white;
+  }
+  .moviesSecond{
+    height: 600px;
+    overflow: auto;
+    width: 400px;
+    position: relative;
+    background-color: #2b3035;
+    color: white;
+  }
+  .m{
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+
+  li{
+    border: 0.2px solid #343a40;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 30px;
+  }
+  img{
+    height: 80px;
+  }
+  li > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+  li > div > #title{
+    font-size: 18px;
+    font-weight: 700;
+   
+  }
+  .btn{
+    position: absolute;
+    top: 20px;
+    right:50px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    height: 20px;
+    width: 20px;
+    border: 0px ;
+  }
+  button{
+    border: 0px;
+  }
+  #search{
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    background-color: #8e6fed;
+    color: white;
+  }
+  #error{
+    position: relative;
+    top: 40px;
+  
+    left: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+  .img{
+    display: flex;
+    gap: 30px;
+    background-color:#343a40;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #msimg{
+    height: 200px;
+    width: 120px;
+  }
+  .movieContent{
+    margin:30px 20px;
+    min-height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .rating{
+    border-radius: 10px;
+    background-color: #212529;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #btnadd{
+    padding: 10px 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    background-color: #2b3035;
+    color: wheat;
+
+  }
+
+  .w{
+   display: flex;
+   gap: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 15px;
+  }
+  
+  #x{
+    border: 1px solid rgb(215, 24, 24);
+    height: 20px;
+    width: 20px;
+    border-radius: 25px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+  }
+
+
+
+  @media screen and (max-width: 1080px) {
+    input{
+      width: 350px;
+      border: 1px solid white;
+    }
+    
+  }
+  @media screen and (max-width: 768px) {
+    input{
+      width: 300px;
+      border: 1px solid white;
+    }
+    #search{
+      padding: 7px 15px;
+    
+    }
+    .nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6741d9;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border: 1px solid white;
+      padding: 10px 30px;
+      margin: 20 50px;
+    }
+    #logotext{
+      font-size: 15px;
+      font-weight: 600;
+      color: white;
+    }
+    #result{
+      font-size: 0px;
+    }
+ 
+    
+    
+  }
+  @media screen and (max-width: 426px) {
+    #img{
+      font-size: 0px;
+    }
+  
+    #logotext{
+      font-size: 0px;
+   
+    }
+    input{
+      width: 200px;
+      border: 1px solid white;
+    }
+    .rish{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav{
+    
+      padding: 0px 0px;
+      margin: 20 50px;
+    }
+    .m{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+  }
+  @media screen and (max-width: 376px) {
+    .nav{
+    
+      padding: 0px 0px;
+      margin: 2px 5px;
+    
+
+
+  }
+  .MoviesYouWatch{
+    margin: 2px 5px;
+    padding: 20px 30px;
+  
+  }
+  .moviesone{
+    width: 360px;
+  }
+  .moviesSecond{
+    width: 360px;
   }
 }
+@media screen and (max-width: 376px) {
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.moviesone{
+  width: 300px;
+}
+.moviesSecond{
+  width: 300px;
+}
+.rating{
+
+ 
+
+  width: 260px;
+  gap: 2px;
 }
 
-.App-link {
-  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
